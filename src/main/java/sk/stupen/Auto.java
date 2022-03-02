@@ -1,13 +1,21 @@
 package sk.stupen;
 
 public class Auto {
-    int pocetKolies;
-    int pocetDveri;
-    String nazov;
+    private double kapacitaNadrze;
+    private double stavNadrze;
 
+    public void jazdi(double vzdialenost){
+        stavNadrze -= vzdialenost * 0.2;
+        if (stavNadrze<0){
+            stavNadrze = 0;
+        }
 
-    public int jedna;
-    int dva;
-    protected int tri;
-    private int styry;
+    }
+    public double getStavNadrze(){
+    return stavNadrze;
+    }
+
+    public void setStavNadrze(double stavNadrze){
+        this.stavNadrze = stavNadrze;
+    }
 }
